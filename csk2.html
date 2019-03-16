@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+<div>
+	
+<table id="customers">
+  <tr>
+    <th>Player Name</th>
+    <th>Player Type</th>
+    <th>Base price(.Cr)</th>
+    <th>Sold price</th>
+  </tr>
+  <tr>
+    <td>Alfreds </td>
+ <td>Bowler</td>
+    <td >3.00</td>
+ 
+    <td id="idea">5.00</td>
+      </tr>
+  <tr>
+    <td>Suresh Raina</td>
+    <td>Batsman</td>
+    <td>3.00</td>
+  
+  <td>5.00</td>
+    </tr>
+</table>
+</div><br><br>
+<label>Betting price</label><br>
+<input type="text" id="quo"/>
+	<br>
+<button onclick="js()">By</button><br><br><h3>&nbsp;&nbsp;Remaining amount</h3>
+	<span id="rem">60</span><br>
+<label>Current Betting player</label>
+<input type="text" value="Yuvaraj Singh" name="play1" style="background-color: black;color: white" /><br>
+<button onclick="js1()">Give up</button>
+<hr><br>
+<label>Current betting opponent</label><br>
+<label>Team:</label><input type="text" value="RCB" name="rcb"><label>&nbsp;&nbsp;Betting amount:</label><input type="tel" value="4" name="amount"/>
+</body>
+<script>
+	function js(){
+	/*	var s=document.getElementById('idea');
+		var m=parseInt(s.value);
+		alert(m);
+	*/var a=document.getElementById('rem');
+	var k=document.getElementById('quo');
+	var i=parseInt(a.innerText);
+	var v=parseInt(k.value);
+i=i-v;
+a.innerText=i;
+}
+function js1()
+{
+alert('Cant bet the current player anymore');
+}
+</script>
+</html>
